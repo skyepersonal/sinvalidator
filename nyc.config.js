@@ -6,10 +6,9 @@ module.exports = {
     "source-map-support/register",
   ],
   "cache": false,
-  "extension": [".ts", ".tsx"],
+  "extension": [".ts"],
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
   ],
   "exclude": [
     "**/*_sql.ts",
