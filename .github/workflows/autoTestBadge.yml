@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  Auto Test:
+  Test:
     # Using Ubuntu (other options exist but Ubuntu is most common)
     runs-on: ubuntu-latest
     container:
