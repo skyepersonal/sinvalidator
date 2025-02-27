@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  test:
+  Auto Test:
     # Using Ubuntun (most common OS used with github actions but can also linux, and some other options)  
     runs-on: ubuntu-latest 
     container:
