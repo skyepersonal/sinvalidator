@@ -13,6 +13,7 @@ dist/
 build/
 coverage/
 _/
+.idea/
 
 *.tsbuildinfo
 *.pid
