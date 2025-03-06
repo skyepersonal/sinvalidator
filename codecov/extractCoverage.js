@@ -12,7 +12,10 @@ for (var path in coverageData) {
     totalStatements += Object.keys(statementMap).length;
     coveredStatements += Object.values(statementMap).filter(function (value) { return value > 0; }).length;
 }
-var coveragePercentage = (coveredStatements / totalStatements) * 100;
+var coveragePercentage = 0;
+if (totalStatements > 0) {
+    coveragePercentage = (coveredStatements / totalStatements) * 100;
+}
 var badgeData = {
     label: 'Coverage',
     message: "".concat(coveragePercentage, "%"),
