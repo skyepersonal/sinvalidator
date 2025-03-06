@@ -12,7 +12,11 @@ for (let path in coverageData) {
   totalStatements += Object.keys(statementMap).length;
   coveredStatements += Object.values(statementMap).filter((value: number) => value > 0).length;
 }
-const coveragePercentage = (coveredStatements / totalStatements) * 100;
+
+let coveragePercentage = 0;
+if (totalStatements > 0) {
+  coveragePercentage = (coveredStatements / totalStatements) * 100;
+}
 
 const badgeData = {
   label: 'Coverage',
