@@ -4,10 +4,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  pull-requests: write
-  
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -28,10 +24,12 @@ jobs:
         id: extract_coverage
         run: |
           COVERAGE=$(node codecov/extractCoverage.js)
+          COVERAGE=$(echo $COVERAGE | xargs)
+          echo "COVERAGE=$COVERAGE" >> $GITHUB_ENV
 
       - name: Print Coverage Value
         run: |
-          echo "Coverage Value is: ${{ env.COVERAGE }}"
+          echo "Coverage Value is: $COVERAGE%"
 
       - name: Set Git user identity
         run: |
