@@ -1,8 +1,8 @@
-//import {validator} from './sinValid';
-//import assert from "assert";
+import {validator} from './sinValid';
+import assert from "assert";
 
 describe('testing sinValid file', () => {
-/*  it('sin length too long', () => {
+  it('sin length too long', () => {
     const sinTestLong = "0464542868";
     assert.equal(validator(sinTestLong),false);
   });
@@ -16,5 +16,5 @@ describe('testing sinValid file', () => {
   });
   it('valid sin numbers', () => {
     assert.equal(validator("046454286"),true);
-  }); */
+  });
 });
