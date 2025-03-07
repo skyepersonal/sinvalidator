@@ -1,5 +1,5 @@
 {
   "label": "Coverage",
-  "message": "0%",
-  "color": "#FF0000"
+  "message": "100%",
+  "color": "brightgreen"
 }
